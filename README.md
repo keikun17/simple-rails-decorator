@@ -1,6 +1,8 @@
 # SimpleRailsDecorator
 
-TODO: Write a gem description
+  Simple Base decorator for Rails Objects
+
+  Adds Rails routing, `content_tag` and helper interface to your delegators
 
 ## Installation
 
@@ -18,7 +20,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+
+    class BikeDecorator < SimpleDecorator
+      def summary
+        content_tag :span do
+          link_to __getobj__.summary, __getobj__
+        end
+      end
+    end
+
+Set
+
+    # Decorate a single object
+    @decorated_bike = BikeDecorator.new(Bicycle.first)
+
+    # You can pass in Arel objects or paginated enumerables
+    @decorated_bikes = BikeDecorator.decorates_collection(Bicycle.arel_scope)
+
+Call
+
+    @decorated_bike.summary
+    @decorated_bikes.map(&:summary)
 
 ## Contributing
 
