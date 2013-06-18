@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = SimpleRailsDecorator::VERSION
   spec.authors       = ["keikun17"]
   spec.email         = ["keikun17@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = "Simple Rails Decorator"
+  spec.summary       = "Simple Rails Decorator"
   spec.homepage      = ""
   spec.license       = "MIT"
 
